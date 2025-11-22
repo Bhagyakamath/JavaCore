@@ -1,6 +1,8 @@
 package com.test.mavenproject1.p3;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
@@ -20,6 +22,12 @@ public class Demo5 {
 			System.out.println(it.next());
 		}
 		
+		
 		System.out.println();
+		
+
+        Collections.sort(employee, Comparator.comparing(EmployeeDto::getEmpname));
+        System.out.println(employee);
+
 		}
 }
