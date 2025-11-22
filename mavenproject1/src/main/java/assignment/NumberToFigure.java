@@ -18,7 +18,7 @@ public class NumberToFigure {
 			    		10000000l, 100000l, 1000l, 100l, 1
 			    };
 			    String sunit[]= {
-			    		" crores ", " lakhs ", " thousands ", " hundreds ", " only"
+			    		" crores ", " lakhs ", " thousand ", " hundred ", " only"
 			    };
 			    String word="";
 			    for(int i=0; i<nunit.length; i++) {
