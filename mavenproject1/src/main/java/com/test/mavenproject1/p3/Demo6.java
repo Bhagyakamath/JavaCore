@@ -1,15 +1,14 @@
 package com.test.mavenproject1.p3;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
-public class Demo5 {
+public class Demo6 {
 	public static void main(String[] args) {
-		List<EmployeeDto> employee=new ArrayList<>();
+		Set<EmployeeDto> employee=new HashSet();
 		employee.add(new EmployeeDto(1, "Ram"));
 		employee.add(new EmployeeDto(2, "Rahul"));
 		employee.add(new EmployeeDto(3, "Priya"));
@@ -27,9 +26,7 @@ public class Demo5 {
 		System.out.println();
 		
 		System.out.println("Sort names");
-//        Collections.sort(employee, Comparator.comparing(EmployeeDto::getEmpname));
-//        Collections.sort(employee, (x,y)->(x.getEmpname().compareTo(y.getEmpname())));
-		Collections.sort(employee);
+//		Collections.sort(employee);   cannot sort a set as it is unordered
         System.out.println(employee);
         System.out.println();
         
@@ -60,10 +57,15 @@ public class Demo5 {
         
         //create a seaparate ArrayList of employees whose name between A to M
         System.out.println("Name between A to M");
-        List<EmployeeDto> x= employee.stream()
+        Set<EmployeeDto> x= (Set<EmployeeDto>) employee.stream()
                 .filter((ob)->(ob.getEmpname().matches("[A-Ma-m].*")))
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
         System.out.println(x);
+        
+        System.out.println();
+        employee.remove(1);
+        System.out.println(employee);
+        
         
         
 
