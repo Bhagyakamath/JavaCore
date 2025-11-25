@@ -5,7 +5,6 @@ public class Add extends Arithmetic{ //is a relationship- because of extends
 		this.num3=this.num1+this.num2;
 	}
 	public void display() {                        //Overriding
-		System.out.println("Sum= ");
 		super.display();
 	}
 }

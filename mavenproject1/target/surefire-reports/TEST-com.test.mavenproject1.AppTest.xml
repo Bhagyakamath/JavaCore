@@ -6,7 +6,7 @@
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\bhagyalakshmee.x1\Desktop\Java\mavenproject1\target\test-classes;C:\Users\bhagyalakshmee.x1\Desktop\Java\mavenproject1\target\classes;C:\Users\bhagyalakshmee.x1\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\bhagyalakshmee.x1\Desktop\JavaCore\mavenproject1\target\test-classes;C:\Users\bhagyalakshmee.x1\Desktop\JavaCore\mavenproject1\target\classes;C:\Users\bhagyalakshmee.x1\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\bhagyalakshmee.x1\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\bhagyalakshmee.x1\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;"/>
     <property name="java.vm.vendor" value="Microsoft"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Microsoft\jdk-11.0.23.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\bhagyalakshmee.x1\AppData\Local\Temp\surefire16013125428082845520\surefirebooter-20251120130442923_3.jar C:\Users\bhagyalakshmee.x1\AppData\Local\Temp\surefire16013125428082845520 2025-11-20T13-04-42_437-jvmRun1 surefire-20251120130442923_1tmp surefire_0-20251120130442923_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\bhagyalakshmee.x1\AppData\Local\Temp\surefire10410462585785873133\surefirebooter-20251125122217539_3.jar C:\Users\bhagyalakshmee.x1\AppData\Local\Temp\surefire10410462585785873133 2025-11-25T12-22-17_185-jvmRun1 surefire-20251125122217539_1tmp surefire_0-20251125122217539_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\bhagyalakshmee.x1\Desktop\Java\mavenproject1\target\test-classes;C:\Users\bhagyalakshmee.x1\Desktop\Java\mavenproject1\target\classes;C:\Users\bhagyalakshmee.x1\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\bhagyalakshmee.x1\Desktop\JavaCore\mavenproject1\target\test-classes;C:\Users\bhagyalakshmee.x1\Desktop\JavaCore\mavenproject1\target\classes;C:\Users\bhagyalakshmee.x1\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\bhagyalakshmee.x1\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\bhagyalakshmee.x1\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\bhagyalakshmee.x1"/>
     <property name="user.language" value="en"/>
@@ -27,13 +27,13 @@
     <property name="java.version.date" value="2024-04-16"/>
     <property name="java.home" value="C:\Program Files\Microsoft\jdk-11.0.23.9-hotspot"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\bhagyalakshmee.x1\Desktop\Java\mavenproject1"/>
+    <property name="basedir" value="C:\Users\bhagyalakshmee.x1\Desktop\JavaCore\mavenproject1"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\bhagyalakshmee.x1\AppData\Local\Temp\surefire16013125428082845520\surefirebooter-20251120130442923_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\bhagyalakshmee.x1\AppData\Local\Temp\surefire10410462585785873133\surefirebooter-20251125122217539_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.23+9-LTS"/>
@@ -48,7 +48,7 @@
     <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\BHAGYA~1.X1\AppData\Local\Temp\"/>
     <property name="java.version" value="11.0.23"/>
-    <property name="user.dir" value="C:\Users\bhagyalakshmee.x1\Desktop\Java\mavenproject1"/>
+    <property name="user.dir" value="C:\Users\bhagyalakshmee.x1\Desktop\JavaCore\mavenproject1"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
