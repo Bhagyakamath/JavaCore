@@ -54,5 +54,12 @@ public class StudentDao {
 		 
 	 }
 	 
+	 public void deleteStudent(StudentDto ob) throws Exception{
+		 Connection con=DbConnector.getConnection();
+		 PreparedStatement ps=con.prepareStatement("delete from student where sroll=?");
+		 ps.setInt(1, ob.getSroll());
+		 int rs=ps.executeUpdate();
+	 }
+	 
 	 
 }

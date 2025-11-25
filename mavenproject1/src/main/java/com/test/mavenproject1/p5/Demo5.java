@@ -20,7 +20,7 @@ public class Demo5 {
 			StudentDao dao=new StudentDao();
 			int ch=0;
 			do {
-				System.out.println("Enter 0 to exit and 1 for display and 2 for Id and 3 for insertion");
+				System.out.println("Enter 0 to exit and 1 for display and 2 for Id and 3 for insertion and 4 for deletion");
 				ch=Read.sc.nextInt();
 				switch(ch) {
 				case 0: System.out.println("Thank you for using the service");
@@ -46,7 +46,7 @@ public class Demo5 {
 						ob1.setFirstname(Read.sc.next());
 						System.out.println("Enter last name: ");
 						ob1.setLname(Read.sc.next());
-						System.out.println("Enter date of birth: ");
+						System.out.println("Enter date of birth(yyyy-mm-dd): ");
 						
 						java.util.Date UtilDate=new java.util.Date();
 						ob1.setDob(new java.sql.Date(UtilDate.getTime()));
@@ -55,6 +55,13 @@ public class Demo5 {
 						System.out.println("Enter gender: ");
 						ob1.setGender(Read.sc.next());
 						dao.insertStudents(ob1);
+						break;
+						
+				case 4: StudentDto ob2=new StudentDto();
+						System.out.println("Enter roll no: ");
+						ob2.setSroll(Read.sc.nextInt());
+						dao.deleteStudent(ob2);
+						break;
 
 
 				}
