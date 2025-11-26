@@ -3,6 +3,7 @@ package com.test.mavenproject1.p5;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,13 @@ public class StudentDao {
 		PreparedStatement ps=con.prepareStatement("select * from student");
 		ResultSet rs=ps.executeQuery();  //rs is a cursor which points data
 		List<StudentDto> l1=new ArrayList<StudentDto>();
+		
+		ResultSetMetaData rm=rs.getMetaData();
+		System.out.println(rm.getColumnCount());
+		int c=rm.getColumnCount();
+		for(int i=1; i<=c; i++) {
+			System.out.println(rm.getColumnName(i)+" "+rm.getColumnType(i));
+		}
 		while(rs.next()) {
 			l1.add(new StudentDto(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDate(4), rs.getString(5)));
 		}
