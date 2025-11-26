@@ -10,6 +10,6 @@ public class ArithmeticFactory {
 	public static Arithmetic arr[]=new Arithmetic[] {new Add(), new Subtract(), new Multiply(), new Division() };
 	public static Arithmetic getArithmetic(int i) {
 		return arr[i];
-	}
+	}                                                                
 	
 }
