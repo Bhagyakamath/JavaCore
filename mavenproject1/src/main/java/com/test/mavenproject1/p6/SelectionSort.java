@@ -21,11 +21,12 @@ public class SelectionSort {
 			int min=i;
 			for(int j=i+1; j<arr.length; j++) {
 				if(arr[min]>arr[j]) {
-					temp=arr[j];
-					arr[j]=arr[i];
-					arr[i]=temp;
+					min=j;
 				}
 			}
+			temp=arr[i];
+			arr[i]=arr[min];
+			arr[min]=temp;
 		}
 		
 		
