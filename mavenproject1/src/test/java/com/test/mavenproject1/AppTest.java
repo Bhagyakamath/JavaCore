@@ -1,38 +1,52 @@
 package com.test.mavenproject1;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.jupiter.api.Assertions.fail;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+import java.sql.Connection;
+import java.util.List;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import com.test.mavenproject1.p5.DbConnector;
+import com.test.mavenproject1.p5.StudentDao;
+import com.test.mavenproject1.p5.StudentDto;
+
+public class AppTest {
+    @Test
+    public void testcase1() {
+    	Assertions.assertTrue(true);
     }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    
+    @Test
+    public void dbcontest() {
+    	try {
+			Connection co=DbConnector.getConnection();
+		} catch (Exception e) {
+			fail();
+		}
     }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    
+    @Test
+    public void dbtest2() {
+    	try {
+			List<StudentDto> l1=new StudentDao().getAllStudents();
+		} catch (Exception e) {
+			fail();
+		}
+    }
+    
+    @Test
+    public void dbtest3() {
+    	try {
+			List<StudentDto> l1=new StudentDao().getAllStudents();
+			if(l1.size()<0) fail();
+		} catch (Exception e) {
+			fail();
+		}
+    }
+    
+    @Test
+    public void dbtest4() {
+    	
     }
 }
