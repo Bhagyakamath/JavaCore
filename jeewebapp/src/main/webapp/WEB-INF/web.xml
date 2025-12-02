@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>p1.Addtwonum</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Addcontroller</servlet-name>
+  	<display-name>Addcontroller</display-name>
+  	<description></description>
+  	<servlet-class>p2.Addcontroller</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Addtwonum</servlet-name>
   	<url-pattern>/Addtwonum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Addcontroller</servlet-name>
+  	<url-pattern>/Addcontroller</url-pattern>
   </servlet-mapping>
 </web-app>
