@@ -44,5 +44,50 @@
     <version>5.13.4</version>
     <scope>test</scope>
 </dependency>
+
+<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-params</artifactId>
+    <version>5.13.4</version>
+    <scope>test</scope>
+</dependency>
   </dependencies>
+  
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <version>2.2</version>
+        </plugin>
+        <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <version>3.3.0</version>
+    <executions>
+        <execution>
+            <id>download-tomcat</id>
+            <phase>generate-resources</phase>
+            <goals>
+                <goal>unpack</goal>
+            </goals>
+            <configuration>
+                <artifactItems>
+                    <artifactItem>
+                        <groupId>org.apache.tomcat</groupId>
+                        <artifactId>tomcat</artifactId>
+                        <version>9.0.89</version> <!-- choose Tomcat version -->
+                        <type>zip</type>
+                        <overWrite>true</overWrite>
+                        <outputDirectory>${project.build.directory}/tomcat</outputDirectory>
+                    </artifactItem>
+                </artifactItems>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+    </plugins>
+</build>
+ 
 </project>
