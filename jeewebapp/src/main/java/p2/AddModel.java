@@ -5,3 +5,4 @@ public class AddModel {
 		ob.setNum3(ob.getNum1()+ob.getNum2());
 	}
 }
+

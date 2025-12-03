@@ -4,6 +4,30 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>Filter1</filter-name>
+  	<display-name>Filter1</display-name>
+  	<description></description>
+  	<filter-class>p3.Filter1</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>Filter2</filter-name>
+  	<display-name>Filter2</display-name>
+  	<description></description>
+  	<filter-class>p3.Filter1</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>Filter1</filter-name>
+  	<url-pattern>/Filter1</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>Filter2</filter-name>
+  	<url-pattern>/Filter1</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>Filter2</filter-name>
+  	<servlet-name>CookieServlet</servlet-name>
+  </filter-mapping>
   <servlet>
   	<servlet-name>Addtwonum</servlet-name>
   	<display-name>Addtwonum</display-name>
@@ -22,6 +46,18 @@
   	<description></description>
   	<servlet-class>p2.Studentcontroller</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SessionServlet</servlet-name>
+  	<display-name>SessionServlet</display-name>
+  	<description></description>
+  	<servlet-class>p3.SessionServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CookieServlet</servlet-name>
+  	<display-name>CookieServlet</display-name>
+  	<description></description>
+  	<servlet-class>p3.CookieServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Addtwonum</servlet-name>
   	<url-pattern>/Addtwonum</url-pattern>
@@ -33,5 +69,13 @@
   <servlet-mapping>
   	<servlet-name>Studentcontroller</servlet-name>
   	<url-pattern>/Studentcontroller</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SessionServlet</servlet-name>
+  	<url-pattern>/SessionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CookieServlet</servlet-name>
+  	<url-pattern>/CookieServlet</url-pattern>
   </servlet-mapping>
 </web-app>
