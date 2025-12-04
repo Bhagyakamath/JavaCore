@@ -69,7 +69,7 @@
   	<display-name>AsynchronousServlet</display-name>
   	<description></description>
   	<servlet-class>p4.AsynchronousServlet</servlet-class>
-  	<async-supported>true</async-supported>
+  	<!-- <async-supported>true</async-supported> -->
   </servlet>
   <servlet-mapping>
   	<servlet-name>Addtwonum</servlet-name>
