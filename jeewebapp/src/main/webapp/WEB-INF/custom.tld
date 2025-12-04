@@ -21,4 +21,15 @@
 <tag-class>p3.StudentReport</tag-class>  
 <body-content></body-content>
 </tag>  
+
+<tag>  
+<name>lform</name>  
+<tag-class>p4.LoginForm</tag-class>  
+<body-content></body-content>
+</tag>  
+
+<tag>  
+<name>uform</name>  
+<tag-class>p4.ConvertUpper</tag-class>  
+</tag> 
 </taglib>  
