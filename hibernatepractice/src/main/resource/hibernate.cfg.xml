@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!-- Main configuration file -->
+<hibernate-configuration>
+    <session-factory>
+        
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+       
+         
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mphasisla</property>
+        
+          
+        <property name="hibernate.connection.username">root</property>
+        
+          
+        <property name="hibernate.connection.password">root@39</property>
+        
+         
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update </property>
+        
+         
+        <mapping class="com.example.hibernatepractice.entity.EmployeeEntity" />
+        <mapping class="com.example.hibernatepractice.entity.SalaryEntity" />
+        <mapping class="com.example.hibernatepractice.entity.EmployeeSalary" />
+        <mapping class="com.example.hibernatepractice.entity.Student1Entity" />
+        <mapping class="com.example.hibernatepractice.entity.Marks1Entity" />
+        <mapping class="com.example.hibernatepractice.entity.MinisterEntity" />
+        <mapping class="com.example.hibernatepractice.entity.ProfileEntity" />
+        <mapping class="com.example.hibernatepractice.entity.CitizenEntity" />
+        <mapping class="com.example.hibernatepractice.entity.PropertyEntity" />
+    </session-factory>
+</hibernate-configuration>
