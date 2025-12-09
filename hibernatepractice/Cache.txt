@@ -1,0 +1,32 @@
+Cache:
+- Temporarily storing data in highspeed RAM and picking this data whenever needed.
+- If caching is not there, each time we have to take the data from secondary storage device which will consume lot of time.
+- As a good software engineer we should try to avoid accessing(read/write) the data from secondary storage devices very often.
+- Hibernate provides two levels of caching:
+1. Level 1 : Which is inbuilt, accessing the data happens in the same session.
+2. Level 2 or cross session caching: Where the data will be cached across different sessions. This should be manually performed. 
+				     To do this we need dependencies + we should have configuration in hibernate file and entity file.
+Note: Caching should be done on the retrieval queries not on the DML operations. This means hibernate will store the data which is recently executed query and if the same query is called it picks the data from the data from cache and does not execute query. It completes the job very faster.
+
+Note: Level 1 caching will automatically happens only on get methods. It will not happen on hibernate query language.
+
+
+In hibernate we can write the queries in two types:
+
+1. Hibernate Query Language(HQL)
+	-The query is written on the entities using entity name and attributes.
+	- We can also have named queries which exactly works like a prepared statements.
+	- We can also have aggregate functions, functions, group by clause etc.
+	- We can use where clause and meta character ':'(same as ? in prepared statements) for substituting values.
+2. Native Query Language- we write query using pure SQL using proper column names and table names.
+
+Named Query:
+- The queries will be created along with entities and given specific name for every query.
+- This will be compiled and kept, which executes faster than normal queries.
+- Here we will have tag called Queries and Query.
+
+Write a named query for any entity which contains:
+1. sum operations and group by clause
+2. like, between and in operators
+3. which contains join of more than one entity
+4. which contains projection

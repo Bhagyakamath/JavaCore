@@ -22,22 +22,22 @@ public class Demo6 {
 			PropertyEntity ob1=new PropertyEntity();
 			ob.setId("1");
 			ob.setName("Rahul");
-//			ob1.setSiteno("21/2");
-//			ob1.setPropertyname("Duplex house");
+			ob1.setSiteno("21/2");
+			ob1.setPropertyname("Duplex house");
 //			
-//			PropertyEntity ob2=new PropertyEntity();
-//			
-//			ob2.setSiteno("21/3");
-//			ob2.setPropertyname("Shopping complex");
-//			ob.getProperty().add(ob1);
-//			ob.getProperty().add(ob2);
-//			ob1.getCitizen().add(ob);
-//			ob1.getCitizen().add(ob);
-//			session.save(ob);
-//			session.save(ob1);
-//			session.save(ob2);
-			
 			PropertyEntity ob2=new PropertyEntity();
+//			
+			ob2.setSiteno("21/3");
+			ob2.setPropertyname("Shopping complex");
+			ob.getProperty().add(ob1);
+			ob.getProperty().add(ob2);
+			ob1.getCitizen().add(ob);
+			ob1.getCitizen().add(ob);
+//			session.save(ob);
+			session.save(ob1);
+			session.save(ob2);
+			
+			ob2=new PropertyEntity();
 			ob2.setSiteno("21/4");
 			ob2.setPropertyname("Housing complex");
 			ob.getProperty().add(ob2);
@@ -49,6 +49,8 @@ public class Demo6 {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		
+		
 
 	}
 

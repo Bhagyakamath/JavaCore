@@ -7,7 +7,7 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="profile2")
+@Table(name="profile3")
 public class ProfileEntity {
 	@Id
 	private String profileid;
