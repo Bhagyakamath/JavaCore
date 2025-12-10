@@ -1,0 +1,47 @@
+Spring Core:
+- Known for implementing inversion of control(IOC), instead of we do certain task the task will be provided.
+- Spring uses container technology or concept for IOC where the objects will be created and stored inside the container and provides the same objects whenever required. It is called as wiring. Here one object is created and used multiple times.
+- Spring uses containers like XML container, java container and annotation based containers.
+- In xml containers we have to create a xml file which contains document type definition(DTD/ xml schema definition-XSD).
+- Java container is a java class with some annotations and here we use all the java language to define the containers. Much easier than xml containers.
+- Annotation based container -there is no seperate container created by user, annotations will be added to the bean wherever it's required.
+  Ex: @Component, @Service, @Repository, @ComponentScan
+
+-When a object is created in a container and this object needs some data providing this data to the object is called as Dependency Injection(DI).
+ Two types of DI:
+ 1. Setter getter DI(highly recommended)
+ 2. Constructor DI
+
+-The objects inside container can be created with 2 scopes:
+ 1. Singleton- same object is used.
+ 2. Prototype- Every request new object will be created.
+
+-By default all the objects will be singleton.
+- The objects can also be lazy initiated.
+
+Create a builder design pattern to store employee details.
+
+What is aspect, weaving, join point, point cut, cross concern, advice?
+
+cross concern: A common task applied across multiple parts of the project
+aspect: A class which implements/embed the cross concern
+weaving: Chaining/linking multiple aspects
+join point: Argument that is provided for execution
+pointcut: When the cross concern to be called
+advice: Timing when the cross concern to be called (after/before/around)
+
+-Implementing these things is called as Aspect Oriented Programming(AOP), where cross concern is automatically implemented without calling based on the pointcut
+
+Rules for AOP:
+1. There should compulsory be a interface
+2. The object of aspect should be defined inside the container(IOC is must)
+
+
+
+
+
+
+
+
+
+
