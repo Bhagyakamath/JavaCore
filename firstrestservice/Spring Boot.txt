@@ -1,0 +1,26 @@
+Spring Boot:
+1. Comes with inbuilt micro tomcat server
+2. It contains parent dependency where minimum dependency are inherited
+3. We can run the services without a server and multiple service can be executed at the same time
+4. It is stateless protocol means it does not have request, session, context, page, application objects are not available. If we need stateful that should be handled in the apps(frontend)
+5. It contains JPA(Java Persistence Object) which works on hibernate and need not add the dependency for hibernate
+6. Here we create a REST controller rather that controller
+7. Here we have to create end points to access the data
+8. Who designs the endpoint should take care of response entities and take care of all the response code
+9. Here we design hibernate data access using interface which extends JPA repository. Inside the interface we can create abstract method to fetch particular information. If the queries are complex still we can write native queries
+10. Object Relation Mapping same as hibernate
+11. It supports the entity validation
+12. It is specialized in handling the exception globally
+13. It supports inter service communication through synchronous or asynchronous
+
+Note: Since there is no archetype for spring boot we use spring initializer to create project
+
+14. All the configurations are done by resource bundling(using application any property files). It also extends YML files
+15. Spring boot applications can be compiled and packaged to jar using same maven
+
+
+
+Global Exception Handling and Spring Boot Validator with Custom Validations:
+
+
+
