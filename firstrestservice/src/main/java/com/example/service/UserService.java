@@ -1,5 +1,9 @@
 package com.example.service;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,6 +68,20 @@ public class UserService {
 		existing.setUsername(updateUser.getUsername());
 		
 		return dao.save(existing);
+	}
+	
+	public List<Map<String, Object>> listUser(){
+		List<Object[]> user=dao.firstNativeQuery();
+		List<Map<String, Object>> result=new ArrayList<Map<String,Object>>();
+		for(Object[] m: user) {
+			Map<String, Object> map=new LinkedHashMap<String, Object>();
+			map.put("sid", m[0]);
+			map.put("username", m[1]);
+			map.put("dob", m[2]);
+			map.put("salary", m[3]);
+			result.add(map);
+		}
+		return result;
 	}
 	
 	

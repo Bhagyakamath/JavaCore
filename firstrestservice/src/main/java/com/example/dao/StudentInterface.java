@@ -15,7 +15,7 @@ public interface StudentInterface extends JpaRepository<StudentEntity, String>{
 	public StudentEntity findByUsernameAndPhonenumber(String username, String phonenumber);
 	
 	@Query(nativeQuery=true, value="select sid, username, dob, salary from stud1")
-	public List<String> firstNativeQuery();
+	public List<Object[]> firstNativeQuery();
 	
 	@Query(nativeQuery=true, value="select sid, username, dob, salary from stud1 where sid=:sid")
 	public List<String> nativeQuery(String sid);

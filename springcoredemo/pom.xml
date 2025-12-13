@@ -70,5 +70,10 @@
     <artifactId>hibernate-core</artifactId>
     <version>6.5.2.Final</version>
 </dependency>
+<dependency>
+<groupId>com.example</groupId>
+  <artifactId>alldependencies</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+</dependency>
   </dependencies>
 </project>
