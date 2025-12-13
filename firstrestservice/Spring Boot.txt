@@ -21,6 +21,8 @@ Note: Since there is no archetype for spring boot we use spring initializer to c
 
 
 Global Exception Handling and Spring Boot Validator with Custom Validations:
-
-
+- Defining the exception at one point and handling all the exceptions from that particular point is called global exception handling.
+- We need to use annotation @ControllerAdvice at the class level so that class becomes global exception handling class.
+-In a rest service more than one data will be received from the apps. Now we should send total exception to the frontend.
+-To do the validations we need to define annotation at the every attribute of the entity. Also we need dependency called starter-validator.
 

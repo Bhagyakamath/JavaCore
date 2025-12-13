@@ -1,0 +1,4 @@
+Spring Profile:
+- Defining multiple properties and activating whichever the property that is required is called as spring profiles.
+
+Write API test(TDD unit test) using spring profile
