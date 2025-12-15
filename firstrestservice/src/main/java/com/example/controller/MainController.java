@@ -44,7 +44,7 @@ public class MainController {
 		return new ResponseEntity<String>("Welcome to controller", HttpStatus.OK);
 	}
 	
-	@GetMapping("/m1")
+	@GetMapping("/m2")
 	public String f2() {
 		return "<h1>Inside the other mapping</h1>";
 	}
