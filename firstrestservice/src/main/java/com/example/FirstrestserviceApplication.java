@@ -8,8 +8,6 @@ import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@Configuration
-//@EnableSpringDataWebSupport
 public class FirstrestserviceApplication {
 
 	public static void main(String[] args) {

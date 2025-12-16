@@ -1,0 +1,45 @@
+Actuators:
+All the actuators should be used only in development
+
+1)application.properties(main):
+spring.application.name=eurekaclient1
+server.port=7076
+eureka.client.registerWithEureka=true
+eureka.client.fetchRegistry=true
+
+eureka.client.serviceUrl.defaultZone=http://localhost:7071/eureka/
+
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/mphasisla
+spring.datasource.username=root
+spring.datasource.password=root@39
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.show-sql=true
+
+spring.profiles.active=dev (for actuator we activated profile)
+
+2)application-dev.properties(actuator):
+app.key=dev
+
+management.endpoints.web.exposure.include=*
+management.endponits.health.show-components=ALWAYS
+management.endponits.health.show-details=ALWAYS
+management.endponits.health.probes-enabled=true
+
+3)Commonly Used Endpoints
+
+/health: Displays the application's health status.
+
+/info: Provides general application information.
+
+/metrics: Shows application metrics, including JVM and custom metrics.
+
+/loggers: Allows querying and modifying logging levels.
+
+/beans: Lists all Spring beans in the application.
+
+/threaddump: Performs a thread dump of the JVM.
+
+/scheduledtasks: Displays details about scheduled tasks.
+
+/prometheus: Exposes metrics in a format compatible with Prometheus.
