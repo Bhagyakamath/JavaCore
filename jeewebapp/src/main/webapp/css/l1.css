@@ -1,0 +1,120 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  color: green;
+}
+
+h1 + p {
+  color: rgb(0, 255, 255);
+}
+
+ul a:hover {
+  color: blue;
+}
+
+f2, .c3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.c1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.c2 {
+  width: 40vw;
+  height: 20vh;
+  padding: calc(0.625px * 1rem);
+  margin-right: 10px;
+}
+
+.text-red {
+  color: #ff0000;
+}
+
+.text-green {
+  color: #00ff00;
+}
+
+.text-blue {
+  color: #0000ff;
+}
+
+.btn {
+  background-color: red;
+  color: wheat;
+  width: fit-content;
+  height: auto;
+  border-radius: 2px;
+  border: 2px black solid;
+}
+.btn:hover {
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+[href^=http] {
+  color: blue;
+}
+[href^=http]:hover {
+  color: green;
+}
+
+[href^=https] {
+  color: blue;
+}
+[href^=https]:hover {
+  color: red;
+}
+
+[href$=".pdf"] {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.table thead tr th {
+  padding: 4px;
+  background-color: black;
+  color: white;
+  border: 3px solid rgb(128, 0, 128);
+}
+.table thead tr th:hover {
+  background: red;
+}
+.table tbody tr td {
+  padding: 4px;
+  border: 3px solid rgb(128, 0, 128);
+}
+.table tbody tr td:hover {
+  background: red;
+}
+.table tbody tr:nth-child(even) {
+  background-color: gray;
+}
+
+@media screen and (max-width: 400px) {
+  input {
+    width: 100%;
+    height: 30px;
+    background-color: grey;
+    color: greenyellow;
+  }
+}
+@media screen and (min-width: 700px) {
+  input {
+    width: 50%;
+    height: 50px;
+    background-color: grey;
+    color: greenyellow;
+  }
+}
+
+/*# sourceMappingURL=l1.css.map */

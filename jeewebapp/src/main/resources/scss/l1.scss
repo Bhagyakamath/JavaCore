@@ -1,0 +1,143 @@
+$p-color:red;
+$p-sibling:rgb(0, 255, 255);
+$direction:row;
+$s-border:true;
+@function convert-rem($pixel){
+	@return ($pixel/16)*1rem;
+}
+*{
+	padding: 0px;
+	margin: 0px;
+}
+h1{
+	color:green;
+}
+h1+p{
+	color: $p-sibling;
+}
+ul{
+	a{
+		&:hover{
+			color: blue;
+		}
+	}
+}
+
+@mixin f1($direction:row) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: $direction;
+}
+
+f2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.c1{
+	@include f1();
+}
+.c2{
+	width:40vw;
+	height:20vh;
+	padding:convert-rem(10px);
+	margin-right:10px;
+}
+
+.c3{
+	@extend f2;
+}
+
+$colors:(red: #ff0000, green: #00ff00, blue: #0000ff);
+@each $x, $y in $colors {
+	.text-#{$x}{color:$y};
+}
+
+.btn{
+	background-color: red;
+	color: wheat;
+	width:fit-content;
+	height: auto;
+	border-radius: 2px;
+	@if($s-border){
+		border: 2px black solid;
+	}
+	&:hover{
+		box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.50);
+		transform: translateY(-2px)
+	}
+}
+
+[href^="http"]{
+	color: blue;
+	&:hover{
+		color: green;
+	}
+}
+
+[href^="https"]{
+	color: blue;
+	&:hover{
+		color: red;
+	}
+}
+
+[href$=".pdf"]{
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.table{
+	thead{
+		tr{
+			th{
+				padding: 4px;
+				background-color: black;
+				color: white;
+				border: 3px solid rgb(128, 0, 128);
+				&:hover{
+					background: red;
+				}
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				padding: 4px;
+				border: 3px solid rgb(128, 0, 128);
+				&:hover{
+						background: red;
+				}
+			}
+			&:nth-child(even){
+						background-color: gray;
+			}
+		}
+		
+	}
+}
+
+
+@media screen and (max-width: 400px){
+	input{
+		width: 100%;
+		height: 30px;
+		background-color: grey;
+		color: greenyellow;
+	}
+}
+
+@media screen and (min-width: 700px){
+	input{
+		width: 50%;
+		height: 50px;
+		background-color: grey;
+		color: greenyellow;
+	}
+}
+
+
+
