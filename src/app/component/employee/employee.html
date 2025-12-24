@@ -1,0 +1,32 @@
+<div>
+    <table class="table table-dark">
+        <thead>
+            <tr >
+                <th >User Id</th>
+                <th >Id</th>
+                <th >Title</th>
+                <th >Completed</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of employees1(); let x=index">
+                <ng-container *ngIf="!i.edit"> 
+                <td >{{i.userId}}</td>
+                <td >{{i.id}}</td>
+                <td >{{i.title}}</td>
+                <td >{{i.completed}}</td>
+                <td ><button (click)="f1(i.id)">Edit</button></td>
+                </ng-container> 
+
+                <ng-container *ngIf="i.edit">
+                <td >{{i.userId}}</td>
+                <td >{{i.id}}</td>
+                <td ><input type="text" name="title" [(ngModel)]="i.title"></td>
+                <td><input type="text" name="completed" [(ngModel)]="i.completed"></td>
+                <td ><button (click)="f2(i, x)">Save</button></td>
+                </ng-container> 
+            </tr>
+        </tbody>
+    </table>
+</div>

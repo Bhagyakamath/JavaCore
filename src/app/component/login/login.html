@@ -1,0 +1,17 @@
+<div class="logincontainer">
+    <h1>Login</h1>
+    <div>
+        <form>
+ <div class="form-group gap">
+   <label for="email">Email address</label>
+   <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" [(ngModel)]="user.uemail">
+ </div>
+ <div class="form-group gap">
+   <label for="password">Password</label>
+   <input type="password" class="form-control" name="password" id="password" placeholder="Password" [(ngModel)]="user.password">
+ </div>
+ <button type="submit" class="btn btn-primary gap" (click)="loginf()">Submit</button>
+</form>
+<a href="">Register</a>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+{
+  "employees": [
+    {
+      "userId": 1,
+      "id": "1",
+      "title": "rghtfvbhftgvtgvfv",
+      "completed": true,
+      "edit": false
+    },
+    {
+      "userId": 2,
+      "id": "2",
+      "title": "Name",
+      "completed": true,
+      "edit": false
+    },
+    {
+      "userId": 3,
+      "id": "3",
+      "title": "H!!!!",
+      "completed": false,
+      "edit": false
+    }
+  ],
+  "salary": [
+    {
+      "userId": 1,
+      "salary": 50000,
+      "edit": false,
+      "id": "1005"
+    },
+    {
+      "userId": 2,
+      "salary": 60000,
+      "edit": false,
+      "id": "6ec3"
+    },
+    {
+      "userId": 3,
+      "salary": 40000,
+      "edit": false,
+      "id": "89c3"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<div class="container mt-4">
+    <h1 class="mb-4 text-primary">Mathematical Table</h1>
+    <div class="card shadow-sm">
+        <form class="row g-3" action="">
+            <div class="col-sm-4"><input type="number" name="a1" id="a1" [(ngModel)]="num"></div>
+            <div class="col-sm-8 d-flex align-items-end gap-2">
+                <button type="button" (click)="cal()">Display</button>
+                <button type="button" (click)="cal1()">Undisplay</button>
+            </div>
+        </form>
+        <div *ngIf="toDisplay" class="mt-4">
+            <table class="table table-bordered table-striped align-middle text-center">
+                <tr *ngFor="let i of values">
+                    <td>{{num}}</td>
+                    <td>x</td>
+                    <td>{{i}}</td>
+                    <td>=</td>
+                    <td>{{num*i}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

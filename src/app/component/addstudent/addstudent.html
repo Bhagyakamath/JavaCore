@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="logincontainer">
+    <h1>Add Student</h1>
+    <div>
+        <form>
+ <div class="form-group gap">
+   <label for="sid">SID</label>
+   <input type="text" class="form-control" name="sid" id="sid" placeholder="Enter sid" [(ngModel)]="student.sid">
+ </div>
+ <div class="form-group gap">
+   <label for="name">Name</label>
+   <input type="text" class="form-control" name="name" id="name" placeholder="Name" [(ngModel)]="student.name">
+ </div>
+ <div class="form-group gap">
+   <label for="uname">User Name</label>
+   <input type="text" class="form-control" name="uname" id="uname" placeholder="User Name" [(ngModel)]="student.username">
+ </div>
+ <div class="form-group gap">
+   <label for="password">Password</label>
+   <input type="password" class="form-control" name="password" id="password" placeholder="Password" [(ngModel)]="student.password">
+ </div>
+ <div class="form-group gap">
+   <label for="salary">Salary</label>
+   <input type="number" class="form-control" name="salary" id="salary" placeholder="Salary" [(ngModel)]="student.salary">
+ </div>
+ <div class="form-group gap">
+   <label for="dob">DOB</label>
+   <input type="text" class="form-control" name="dob" id="dob" placeholder="Enter date(YYYY-MM-DD)" [(ngModel)]="student.dob">
+ </div>
+ <div class="form-group gap">
+   <label for="pnumber">Phone Number</label>
+   <input type="text" class="form-control" name="pnumber" id="pnumber" placeholder="Enter phone number" [(ngModel)]="student.phonenumber">
+ </div>
+ <div class="form-group gap">
+   <label for="mark">Marks</label>
+   <input type="number" class="form-control" name="mark" id="mark" placeholder="Enter mark" [(ngModel)]="student.marks">
+ </div>
+ <button type="submit" class="btn btn-primary gap" (click)="add()">Submit</button>
+ 
+</form>
+   {{smessage()}}
+   {{emessage}}
+    </div>
+</div>
+
+<app-footer></app-footer>

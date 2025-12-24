@@ -1,0 +1,23 @@
+<div>
+    <h2>Addition of two numbers</h2>
+    <form action="">
+        <div>
+            <label for="a1">Enter number 1</label>
+            <input type="number" id="a1" [(ngModel)]="num1" name="a1">
+        </div>
+        <div>
+            <label for="a2">Enter number 2</label>
+            <input type="number" id="a2" [(ngModel)]="num2" name="a2">
+        </div>
+
+        <div>
+            <label for="a3">Result:</label>
+            <input type="number" id="a3" value="{{num3}}" name="a3">
+        </div>
+
+        <div>
+            <button type="button" (click)="add()">Add</button>
+        </div>
+
+    </form>
+</div>

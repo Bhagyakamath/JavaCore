@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+<div class="logincontainer">
+    <h1>Add Student</h1>
+    <div>
+        <form [formGroup]="studentform" (ngSubmit)="save()">
+ <div class="form-group gap">
+   <label for="sid">SID</label>
+   <input type="text" class="form-control" name="sid" id="sid" placeholder="Enter sid" formControlName="sid">
+   <div *ngIf="studentform.get('sid')?.invalid && studentform.get('sid')?.touched">
+        <p>Please enter minimum 3 characters</p>
+   </div>
+ </div>
+ <div class="form-group gap">
+   <label for="name">Name</label>
+   <input type="text" class="form-control" name="name" id="name" placeholder="Name" formControlName="name">
+   <div *ngIf="studentform.get('name')?.invalid && studentform.get('name')?.touched">
+        <p>Please enter minimum 3 characters and Name should have only letters</p>
+   </div>
+ </div>
+ <div class="form-group gap">
+   <label for="uname">User Name</label>
+   <input type="text" class="form-control" name="uname" id="uname" placeholder="User Name" formControlName="username">
+   <div *ngIf="studentform.get('username')?.invalid && studentform.get('username')?.touched">
+        <p>Please enter valid email id</p>
+   </div>
+ </div>
+ <div class="form-group gap">
+   <label for="password">Password</label>
+   <input type="password" class="form-control" name="password" id="password" placeholder="Password" formControlName="password">
+   <div *ngIf="studentform.get('password')?.invalid && studentform.get('password')?.touched">
+        <p>Please enter atleast one uppercase letter, lowercase letter, a digit, a special characters and password should be atleast 8 characters long</p>
+   </div>
+ </div>
+ <div class="form-group gap">
+   <label for="salary">Salary</label>
+   <input type="number" class="form-control" name="salary" id="salary" placeholder="Salary" formControlName="salary">
+   <div *ngIf="studentform.get('salary')?.invalid && studentform.get('salary')?.touched">
+        <p>Please enter salary in numbers</p>
+   </div>
+ </div>
+ <div class="form-group gap">
+   <label for="dob">DOB</label>
+   <input type="text" class="form-control" name="dob" id="dob" placeholder="Enter date(YYYY-MM-DD)" formControlName="dob">
+   <div *ngIf="studentform.get('dob')?.invalid && studentform.get('dob')?.touched">
+        <p>Please enter date of birth in YYYY-MM-DD format</p>
+   </div>
+ </div>
+ <div class="form-group gap">
+   <label for="pnumber">Phone Number</label>
+   <input type="text" class="form-control" name="pnumber" id="pnumber" placeholder="Enter phone number" formControlName="phonenumber">
+   <div *ngIf="studentform.get('phonenumber')?.invalid && studentform.get('phonenumber')?.touched">
+        <p>Please enter only 10 digits</p>
+   </div>
+ </div>
+ <div class="form-group gap">
+   <label for="mark">Marks</label>
+   <input type="number" class="form-control" name="mark" id="mark" placeholder="Enter mark" formControlName="marks">
+   <div *ngIf="studentform.get('marks')?.invalid && studentform.get('marks')?.touched">
+        <p>Please enter marks between 0 to 100</p>
+   </div>
+ </div>
+ <button type="submit" class="btn btn-primary gap" [disabled]="studentform.invalid">Submit</button>
+ 
+</form>
+   
+    </div>
+</div>
+
+<app-footer></app-footer>
+

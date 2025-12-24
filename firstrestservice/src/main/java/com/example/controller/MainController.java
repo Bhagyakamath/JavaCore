@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.example.dao.LoginInterface;
 import com.example.dao.StudentInterface;
+import com.example.entity.LoginEntity;
 import com.example.entity.StudentEntity;
 import com.example.service.UserService;
 
@@ -27,7 +29,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/m1")
-@CrossOrigin
+@CrossOrigin (origins="http://localhost:4200")
 @Component
 public class MainController {
 	@Autowired
@@ -38,6 +40,9 @@ public class MainController {
 	
 	@Autowired
 	RestTemplate template;
+	
+	@Autowired
+	LoginInterface loginDao;
 	
 	@GetMapping("/")
 	public ResponseEntity<String> f1() {
@@ -106,6 +111,20 @@ public class MainController {
 	public String f12(){
 		return template.getForObject("http://localhost:9096/mail/test", String.class);
 		
+	}
+	
+	@PostMapping("/login")
+	public boolean f13(@RequestBody LoginEntity login) {
+		Optional<LoginEntity> l1=loginDao.findById(login.getUemail());
+		if(l1.isPresent()) {
+			if(l1.get().getPassword().equals(login.getPassword())) {
+				return true;
+			}
+			else
+				return false;
+		}
+		else
+			return false;
 	}
 	
 }
